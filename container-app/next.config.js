@@ -10,6 +10,8 @@ const nextConfig = {
 					filename: 'static/chunks/remoteEntry.js',
 					remotes: {
 						remoteReact: 'remote_react@http://localhost:4001/remoteEntry.js',
+						sharedComponents:
+							'shared_components@http://localhost:8080/remoteEntry.js',
 						// sharedComponents:
 						// 	'shared_components@http://localhost:8080/remoteEntry.js',
 						// adminConsole: 'admin_console@http://localhost:3004/remoteEntry.js',

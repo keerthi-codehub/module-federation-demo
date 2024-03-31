@@ -6,9 +6,11 @@
 	],
 	"scripts": {
 		"pkg:install": "pnpm i && cd host && pnpm i && cd ../remote && pnpm i && cd ../shared-components && pnpm i && cd ../vehicles && pnpm i && cd ../admin-console && pnpm i && cd ../peoples && pnpm i && cd ../work-order && pnpm i cd ../account && pnpm i",
+		"demo-pkg:install": "pnpm i && cd host && pnpm i && cd ../remote-react && pnpm i && cd ../shared-components && pnpm i && cd ../container-app && pnpm i",
 		"start": "wsrun --parallel start",
 		"build": "yarn workspaces run build",
 		"dev": "wsrun --parallel dev",
+		"dev-demo": "concurrently \"cd shared-components; pnpm run dev\" \"cd remote-react; pnpm run dev\" \"cd container-app; pnpm run dev-n\"",
 		"dev-n": "concurrently \"cd shared-components; pnpm run dev\" \"cd vehicles; pnpm run dev-n\" \"cd admin-console; pnpm run dev\" \"cd peoples; pnpm run dev\" \"cd work-order; pnpm run dev\" \"cd account; pnpm run dev-n\""
 	},
 	"devDependencies": {

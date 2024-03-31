@@ -3,11 +3,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const deps = require('./package.json').dependencies;
 
-module.exports = {
+
+module.exports = (env, argv)=>( {
 	mode: 'development',
 	entry: './src/index.js',
 	output: {
-		publicPath: 'http://localhost:4001/',
+		publicPath: process.env.BASE_URL ,
 	},
 	devServer: {
 		port: 4001,
@@ -53,3 +54,4 @@ module.exports = {
 		}),
 	],
 };
+)
