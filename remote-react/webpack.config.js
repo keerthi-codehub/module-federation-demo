@@ -53,5 +53,5 @@ module.exports = (env, argv)=>( {
 			template: './public/index.html',
 		}),
 	],
-};
+}
 )
